@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fireplace</title>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Sankofa+Display&family=Song+Myung&display=swap');
+        
+body {
+    font-family: 'Song Myung', sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url('feathers.jpeg') no-repeat center bottom fixed; /* 배경 이미지를 아래쪽에 맞춤 */
+    background-size: 90%; /* 이미지를 화면에 꽉 차게 함 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold; /* Bold font weight for "작가의 방" */
+            margin-bottom: 10vh; /* Adjusted to make space for the additional text */
+        }
+
+        .quote {
+            font-size: 20px;
+            margin-bottom: 20vh; /* Adjusted to position the text above the buttons */
+            line-height: 1.5;
+        }
+
+        .quote u {
+            font-weight: normal; /* Normal font weight for the underlined text */
+        }
+
+        .button-container {
+            margin-bottom: 15vh; /* Position the buttons at 3/4 of the page height */
+        }
+
+        .button {
+            width: 200px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>화가의 방</h1>
+    <div class="quote">
+        내가 그리는 그림은 세상을 비추는 나의 거울이야 <br> 거울로 쪽지를 비추어봐 <br> 꼭 구렁이를 검거해서 나의 아이들을 지켜줘 
+    </div>
+    <div class="button-container">
+        <a href="index.html" class="button">다른 방 탐색하기</a>
+        
+    </div>
+</body>
+</html>
