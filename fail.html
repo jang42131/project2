@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>범인 검거 성공</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Sankofa+Display&family=Song+Myung&display=swap');
+        
+        body {
+            font-family: 'Song Myung', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('snake3.png') no-repeat center center fixed; /* 여기에 배경 이미지 파일 경로를 넣으세요 */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .message {
+            background-color: rgba(0, 0, 0, 0.7); /* 반투명한 검정 배경 */
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: yellow;
+            margin: 0;
+        }
+        /* 순차적으로 나오는 이미지와 관련된 스타일 */
+        .images {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .images img {
+            max-width: 100%;
+            max-height: 150px;
+            margin: 10px;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .images img.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>범인 검거 실패 </h1>
+    </div>
+
+
+    <script>
+        // 이미지가 순차적으로 나타나도록 하는 스크립트
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.images img');
+            let delay = 0;
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add('show');
+                }, delay);
+                delay += 2000; // 각 이미지가 2초 간격으로 나타남
+            });
+        });
+    </script>
+</body>
+</html>

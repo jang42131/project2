@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Sankofa+Display&family=Song+Myung&display=swap');
+        
+        body {
+            font-family: 'Song Myung', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000000; /* 배경색을 검정색으로 변경 */
+            color: #fff; /* 텍스트 색상을 흰색으로 변경 */
+        }
+        .container {
+            background-color: #333; /* 컨테이너 배경을 짙은 회색으로 변경 */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 약간의 그림자를 추가 */
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #444; /* 입력 필드의 테두리를 어두운 회색으로 변경 */
+            border-radius: 4px;
+            background-color: #222; /* 입력 필드의 배경을 어두운 색으로 변경 */
+            color: #fff; /* 입력 필드의 텍스트 색상을 흰색으로 변경 */
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>범인은 누구?</h1>
+        <form onsubmit="return checkPassword()">
+            <input type="password" id="password" placeholder="Enter password" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const engToKor = { 
+                'r': 'ㄱ', 'R': 'ㄲ', 's': 'ㄴ', 'e': 'ㄷ', 'E': 'ㄸ', 'f': 'ㄹ', 'a': 'ㅁ', 'q': 'ㅂ', 'Q': 'ㅃ', 't': 'ㅅ', 'T': 'ㅆ',
+                'd': 'ㅇ', 'w': 'ㅈ', 'W': 'ㅉ', 'c': 'ㅊ', 'z': 'ㅋ', 'x': 'ㅌ', 'v': 'ㅍ', 'g': 'ㅎ', 
+                'k': 'ㅏ', 'o': 'ㅐ', 'i': 'ㅑ', 'O': 'ㅒ', 'j': 'ㅓ', 'p': 'ㅔ', 'u': 'ㅕ', 'P': 'ㅖ', 'h': 'ㅗ', 'y': 'ㅛ',
+                'n': 'ㅜ', 'b': 'ㅠ', 'm': 'ㅡ', 'l': 'ㅣ'
+            };
+            
+            let password = document.getElementById('password').value;
+            let converted = '';
+
+            for (let char of password) {
+                converted += engToKor[char] || char; // Convert only if the character is in the map
+            }
+
+            if (converted === "박사") { // "dmltk"의 한글 자판 입력 결과는 "대덕"
+                window.location.href = "answer.html"; // Redirect to success page
+                return false; // Prevent form submission
+            } else {
+                window.location.href = "fail.html"; // Redirect to fail page
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>

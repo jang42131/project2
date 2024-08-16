@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer's Room</title>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Sankofa+Display&family=Song+Myung&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            background: url('designer1.JPG') no-repeat center center fixed;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-color: black; 
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold; /* Bold font weight for "작가의 방" */
+            margin-bottom: 10vh; /* Adjusted to make space for the additional text */
+        }
+
+        .quote {
+            font-size: 20px;
+            margin-bottom: 20vh; /* Adjusted to position the text above the buttons */
+            line-height: 1.5;
+        }
+
+        .quote u {
+            font-weight: normal; /* Normal font weight for the underlined text */
+        }
+
+        .button-container {
+            margin-bottom: 15vh; /* Position the buttons at 3/4 of the page height */
+        }
+
+        .button {
+            width: 200px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>의상디자이너의 방</h1>
+    <div class="quote">
+        난 상류층 고객으로부터 많은 정보를 수집하지 <br> 많은 비밀들을 알고 있어 <br> 가위로 명치를 찌르면 알게 될거야 <P> (가위를 센서에 가져다대세요) </P>
+    </div>
+    <div class="button-container">
+        <a href="index.html" class="button">다른 방 탐색하기</a>
+        <a href="report.html" class="button">범인 신고</a>
+    </div>
+</body>
+</html>
