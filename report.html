@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,21 +62,11 @@
 
     <script>
         function checkPassword() {
-            const engToKor = { 
-                'r': 'ㄱ', 'R': 'ㄲ', 's': 'ㄴ', 'e': 'ㄷ', 'E': 'ㄸ', 'f': 'ㄹ', 'a': 'ㅁ', 'q': 'ㅂ', 'Q': 'ㅃ', 't': 'ㅅ', 'T': 'ㅆ',
-                'd': 'ㅇ', 'w': 'ㅈ', 'W': 'ㅉ', 'c': 'ㅊ', 'z': 'ㅋ', 'x': 'ㅌ', 'v': 'ㅍ', 'g': 'ㅎ', 
-                'k': 'ㅏ', 'o': 'ㅐ', 'i': 'ㅑ', 'O': 'ㅒ', 'j': 'ㅓ', 'p': 'ㅔ', 'u': 'ㅕ', 'P': 'ㅖ', 'h': 'ㅗ', 'y': 'ㅛ',
-                'n': 'ㅜ', 'b': 'ㅠ', 'm': 'ㅡ', 'l': 'ㅣ'
-            };
-            
+            // Get the value of the password input field
             let password = document.getElementById('password').value;
-            let converted = '';
-
-            for (let char of password) {
-                converted += engToKor[char] || char; // Convert only if the character is in the map
-            }
-
-            if (converted === "qkrtk") { // "dmltk"의 한글 자판 입력 결과는 "대덕"
+            
+            // Check if the entered password is "qkrtk"
+            if (password === "qkrtk") {
                 window.location.href = "answer.html"; // Redirect to success page
                 return false; // Prevent form submission
             } else {
